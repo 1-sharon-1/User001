@@ -7,3 +7,4 @@ git commit -m "<type any message you want>"
 git status - gives status of working tree
 git remote add origin <ssh url.right>
 git push orgin master
+git pull origin master - will update changes made on the github.com
