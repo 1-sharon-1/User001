@@ -1,0 +1,47 @@
+<!-- this page is not used -->
+
+<!DOCTYPE html>
+<html>
+    <title>Table</title>
+    <head>
+        <style>
+        
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        table#01 {
+            width: 100%;
+            background-color: white;
+        }
+
+        </style>
+    </head>
+    <body>
+
+        <h2><b>Users List</b></h2>
+
+        <table style="width:100%">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>Address</th>
+            </tr>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>

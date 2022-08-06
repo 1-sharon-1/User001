@@ -1,0 +1,12 @@
+<html>
+    <title>Admin Sign-up</title>
+    <body>
+        <h1>Create Admin</h1>
+
+    <form action="{{url_for('create_admin')}}" methods="POST">
+        <input type="email" placeholder="email" name="email"><br><br>
+        <input type="password" name="password" placeholder="enter your password"><br><br>
+        <input type="submit" value="sign up">
+     </form>
+     </body>
+</html>

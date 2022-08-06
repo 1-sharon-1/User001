@@ -1,0 +1,16 @@
+<html>
+<title>Dashboard</title>
+    <h1>Welcome to the dashboard {{ current_user.name }} </h1>
+    <h2><a href="{{url_for('logout')}}">logout</a></h2>
+
+    <div>
+        <centre>
+            <li><a href="/profile">profile</a></li>
+            
+            {% if current_user.is_admin == True %}
+                <li> <a href="/admin">Admin</a></li>
+            {% endif %}
+        </centre>
+    </div>
+    
+</html>

@@ -1,0 +1,9 @@
+touch.gitignore - creates a ".gitignore.txt" file which contains name of all the files and folder to be ignored while pushing 
+git init - initializes git
+git config --global user.name <name>
+git config --global user.email <email>
+git add . - breing all the files in the staging area
+git commit -m "<type any message you want>"
+git status - gives status of working tree
+git remote add origin <ssh url.right>
+git push orgin master

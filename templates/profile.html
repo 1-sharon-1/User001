@@ -1,0 +1,14 @@
+<html>
+    <title>profile</title>
+    <!-- <body style="background-color:plum;"> -->
+        <ul>
+        <li><h3>Username: <i>{{ current_user.name }}</i></h3></li>
+        <li><h3>Email: <i>{{ current_user.email }}</i></h3></li>
+        <li><h3>Address: <i>{{ current_user.address }}</i></h3></li>
+        </ul>
+        <br>
+        <h2><a style="color:rgb(14, 18, 243);" href="{{url_for('dashboard')}}">dashboard</a></h2>
+
+        <h2><a style="color:rgb(243, 14, 14);" href="{{url_for('logout')}}">logout</a></h2>
+    </body>
+</html>
