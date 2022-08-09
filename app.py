@@ -11,10 +11,13 @@ import os
 app = Flask(__name__)
 db = SQLAlchemy(app)
 
+
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/shbhosle/Desktop/Fresh/User_Module/tmp/database.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://jcpmfwhcjfgliz:f5d6f0904d7aec051cb0c9eb0f93c7bd922926412422664279fd96841f7445d6@ec2-54-225-234-165.compute-1.amazonaws.com:5432/ddo2d10saf034t"
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://jcpmfwhcjfgliz:f5d6f0904d7aec051cb0c9eb0f93c7bd922926412422664279fd96841f7445d6@ec2-54-225-234-165.compute-1.amazonaws.com:5432/ddo2d10saf034t"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://user_module:user_module@localhost:5432/user_module"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'Ronaldo is better than meessi'
+
 
 admin = Admin(app, name='Admin Panel')
 
@@ -134,4 +137,6 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True)
