@@ -56,7 +56,7 @@ def index():
 
 @app.route('/process', methods=['POST'])
 def process():
-    name = request.form['name']
+    name = request.form['name'].strip()
     email = request.form['email']
     password = request.form['password']
     address = request.form['address']
