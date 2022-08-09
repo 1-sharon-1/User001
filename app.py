@@ -17,7 +17,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'Ronaldo is better than meessi'
 
 admin = Admin(app, name='Admin Panel')
-
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
