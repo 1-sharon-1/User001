@@ -10,7 +10,8 @@ from datetime import timedelta
 app = Flask(__name__)
 db = SQLAlchemy(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/shbhosle/Desktop/Fresh/User_Module/tmp/database.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/shbhosle/Desktop/Fresh/User_Module/tmp/database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://kpombsvaaiqmrb:a25cd625efcf913b295a58287cb5cd0b66863b8836bdb8338f3f3ac87b8f189e@ec2-54-227-248-71.compute-1.amazonaws.com:5432/dbvhmhnf4gi9s0"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'Ronaldo is better than meessi'
 
