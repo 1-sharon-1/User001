@@ -5,13 +5,14 @@ from werkzeug.utils import cached_property
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from datetime import timedelta
+import os
 
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/shbhosle/Desktop/Fresh/User_Module/tmp/database.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://jcpmfwhcjfgliz:f5d6f0904d7aec051cb0c9eb0f93c7bd922926412422664279fd96841f7445d6@ec2-54-225-234-165.compute-1.amazonaws.com:5432/ddo2d10saf034t"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'Ronaldo is better than meessi'
 
