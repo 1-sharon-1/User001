@@ -8,7 +8,7 @@ from datetime import timedelta
 
 
 app = Flask(__name__)
-db=SQLAlchemy(app)
+db = SQLAlchemy(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/shbhosle/Desktop/Fresh/User_Module/tmp/database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -115,7 +115,7 @@ def create_admin():
         return redirect(url_for('dashboard'))
 
     if request.method == 'POST':
-        new_users=Users(email=request.form['email'], password=request.form['password'], is_admin=True)
+        new_users = Users(email=request.form['email'], password=request.form['password'], is_admin=True)
         db.session.add(new_users)
         db.session.commit()
         return 'you have created an admin account'
@@ -129,7 +129,6 @@ def logout():
     session.clear()
     # app.permanent_session_lifetime = timedelta(seconds=5)
     return redirect("/login")
-
 
 
 if __name__ == '__main__':
