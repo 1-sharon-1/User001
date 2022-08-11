@@ -1,14 +1,41 @@
 <html>
-    <title>profile</title>
+<title>profile</title>
+<style>
+    .container {
+        background-color: rgb(251, 255, 0);
+        border: 20px solid rgb(219, 54, 224);
+        padding: 76px;
+        margin: 170px auto;
+        width: 470px;
+        border-radius: 25px;
+        transition-property: background-color;
+        transition-duration: 1s;
+    }
+
+    .container:hover {
+        background-color: rgb(28, 209, 209)
+    }
+</style>
+
+<body>
     <!-- <body style="background-color:plum;"> -->
+    <div class="container">
         <ul>
-        <li><h3>Username: <i>{{ current_user.name }}</i></h3></li>
-        <li><h3>Email: <i>{{ current_user.email }}</i></h3></li>
-        <li><h3>Address: <i>{{ current_user.address }}</i></h3></li>
+            <li>
+                <h3>Username: <i>{{ current_user.name }}</i></h3>
+            </li>
+            <li>
+                <h3>Email: <i>{{ current_user.email }}</i></h3>
+            </li>
+            <li>
+                <h3>Address: <i>{{ current_user.address }}</i></h3>
+            </li>
         </ul>
         <br>
         <h2><a style="color:rgb(14, 18, 243);" href="{{url_for('dashboard')}}">dashboard</a></h2>
 
         <h2><a style="color:rgb(243, 14, 14);" href="{{url_for('logout')}}">logout</a></h2>
-    </body>
+    </div>
+</body>
+
 </html>

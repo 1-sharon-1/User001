@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign-up</title>
+    <style>
+        .container{
+            background-color: rgb(251, 255, 0);
+            border: 20px solid rgb(219, 54, 224);
+            padding: 76px;
+            margin: 170px auto;
+            width: 470px;
+            border-radius: 25px;
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+        .container:hover{
+            background-color: rgb(28, 209, 209)
+
+        }
+    
+    </style>
 </head>
 <body>
+    <div class="container">
     <h2>Welcome to the website...</h2>
     <a href="login"><h2>Already a member ? then click here to login</h2></a>
     <form method="POST" action="{{url_for('process')}}">
@@ -18,6 +36,7 @@
         <input type="submit" value="Sign-up">
         
     </form>
+    </div>
 
 
 

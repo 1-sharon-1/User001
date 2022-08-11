@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-</head>
-<body>
-    <h2>Welcome to the login page...</h2>
-    <a href="{{url_for('index')}}"><h2>New to the site ? then sign-up here</h2></a>
-    <form method="POST" action="{{url_for('login')}}">
+    <style>
+        .container {
+            background-color: rgb(251, 255, 0);
+            border: 20px solid rgb(219, 54, 224);
+            padding: 76px;
+            margin: 170px auto;
+            width: 470px;
+            border-radius: 25px;
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
 
-        <input type="text" label="Email" name="email" placeholder="Enter your email here"><br><br>
-        <input type="password" label="Password" name="password" placeholder="enter your password"><br><br>
-        <input type="submit" value="submit">
-        
-    </form>
+        .container:hover {
+            background-color: rgb(28, 209, 209)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Welcome to the login page...</h2>
+        <a href="{{url_for('index')}}">
+            <h2>New to the site ? then sign-up here</h2>
+        </a>
+        <form method="POST" action="{{url_for('login')}}">
+
+            <input type="text" label="Email" name="email" placeholder="Enter your email here"><br><br>
+            <input type="password" label="Password" name="password" placeholder="enter your password"><br><br>
+            <input type="submit" value="submit">
+
+        </form>
+    </div>
 
 
 
 </body>
+
 </html>

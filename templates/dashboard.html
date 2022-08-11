@@ -1,16 +1,40 @@
 <html>
 <title>Dashboard</title>
-    <h1>Welcome to the dashboard {{ current_user.name }} </h1>
-    <h2><a href="{{url_for('logout')}}">logout</a></h2>
 
-    <div>
+<head>
+    <style>
+        .container {
+            background-color: rgb(251, 255, 0);
+            border: 20px solid rgb(219, 54, 224);
+            padding: 76px;
+            margin: 170px auto;
+            width: 470px;
+            border-radius: 25px;
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+
+        .container:hover {
+            background-color: rgb(28, 209, 209)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the dashboard {{ current_user.name }} </h1>
+        <h2><a href="{{url_for('logout')}}">logout</a></h2>
+
+
         <centre>
             <li><a href="/profile">profile</a></li>
-            
+            <li><a href="/table">table</a></li>
+
             {% if current_user.is_admin == True %}
-                <li> <a href="/admin">Admin</a></li>
+            <li> <a href="/admin">Admin</a></li>
             {% endif %}
         </centre>
     </div>
-    
+</body>
+
 </html>
